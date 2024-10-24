@@ -1,0 +1,59 @@
+
+
+@layer base {
+  .steps-indicator{
+    @apply flex items-center gap-x-6;
+    .step-item{
+      @apply flex-auto flex items-center gap-x-6;
+      .count{
+        @apply flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-red-50 text-baseColor;
+      }
+      .separator{
+        @apply flex-auto h-[1px] block bg-red-50;
+      }
+
+      &:nth-child(2){
+        @apply flex-none;
+      }
+
+      &.active{
+        .count{
+          @apply bg-baseColor text-white;
+        }
+        .separator{
+          @apply bg-baseColor;
+        }
+      }
+    }
+  }
+  select{
+    position: relative;
+    &.custom_select{
+      background: url("@/assets/icons/select-arrow.svg") no-repeat;
+      background-position:
+              calc(100% - 10px) calc(1em + 2px),
+              calc(100% - 15px) calc(1em + 2px),
+              100% 0;
+      padding-right: 25px;
+
+      &.small_select{
+        background-position:
+                calc(100% - 4px) calc(1em + -5px),
+                calc(100% - 15px) calc(1em + -2px),
+                100% 0;
+        padding-right: 25px !important;
+      };
+    }
+  }
+
+  input{
+    &[type="number"]{
+      @apply appearance-none hover:appearance-none;
+    }
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

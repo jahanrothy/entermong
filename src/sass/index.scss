@@ -1,0 +1,15 @@
+
+
+// Fonts Import
+@use "partials/fonts" as *;
+
+// Custom Styles
+@use "base" as *;
+@use "loader" as *;
+@use "sidebar";
+@use "partials/forms";
+@use "partials/table";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
