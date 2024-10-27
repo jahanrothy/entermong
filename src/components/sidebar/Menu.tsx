@@ -3,12 +3,12 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import {ChevronDownIcon} from "@heroicons/react/20/solid";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 // icons
-import DashboardIcon from '@/assets/icons/dashboard.svg';
+import DashboardIcon from "@/assets/icons/dashboard.svg";
 import ProductManagment from "@/assets/icons/product_managment.svg";
 
 const MainMenu: React.FC = () => {
@@ -25,20 +25,72 @@ const MainMenu: React.FC = () => {
       current: currentPath === "/admin",
     },
     {
-      name: "Product Management",
-      icon:  <ProductManagment />,
-      current: currentPath.startsWith("/admin/products"),
-      children: [
-        {
-          name: "Category list",
-          href: "/admin/products/category",
-          current: currentPath === "/admin/products/category" ||
-              currentPath === "/admin/products/category/create" ||
-              currentPath.match(/\/admin\/products\/category\/[a-zA-Z0-9_-]+\/details/) ||
-              currentPath.match(/\/admin\/products\/category\/[a-zA-Z0-9_-]+\/edit/)
-          ,
-        },
-      ],
+      name: "Parent User Management",
+      icon: <ProductManagment />,
+      href: "/admin/parent-user-management",
+      current: currentPath === "/admin/parent-user-management",
+    },
+
+    {
+      name: "Teacher User Management",
+      icon: <ProductManagment />,
+      href: "/admin/teacher-user-management",
+      current: currentPath === "/admin/teacher-user-management",
+    
+    },
+
+    {
+      name: "Service Management",
+      icon: <ProductManagment />,
+      href: "/admin/service-management",
+      current: currentPath === "/admin/service-management",
+     
+    },
+
+    {
+      name: "Withdrawl Management",
+      icon: <ProductManagment />,
+      href: "/admin/withdrawl-management",
+      current: currentPath === "/admin/withdrawl-management",
+      // children: [
+      //   {
+      //     name: "Category list",
+      //     href: "/admin/products/category",
+      //     current:
+      //       currentPath === "/admin/products/category" ||
+      //       currentPath === "/admin/products/category/create" ||
+      //       currentPath.match(
+      //         /\/admin\/products\/category\/[a-zA-Z0-9_-]+\/details/
+      //       ) ||
+      //       currentPath.match(
+      //         /\/admin\/products\/category\/[a-zA-Z0-9_-]+\/edit/
+      //       ),
+      //   },
+      // ],
+    },
+
+    {
+      name: "Notice Management",
+      icon: <ProductManagment />,
+      href: "/admin/notice-management",
+      current: currentPath === "/admin/notice-management",
+   
+    },
+
+    {
+      name: "1:1 Inquiry Management",
+      icon: <ProductManagment />,
+      href: "/admin/inquiry-management",
+      current: currentPath === "/admin/inquiry-management",
+    
+    },
+
+    {
+      name: "Others Management",
+      icon: <ProductManagment />,
+      href: "/admin/others-management",
+      current: currentPath === "/admin/others-management",
+      
     },
   ];
 
@@ -58,15 +110,15 @@ const MainMenu: React.FC = () => {
                     to={item.href}
                     className={classNames(
                       item.current
-                        ? "bg-primary text-white font-bold current"
-                        : "text-primary hover:text-white hover:bg-primary",
+                        ? "bg-pinkPrimary text-white font-bold current"
+                        : "text-primary hover:text-white hover:bg-pinkPrimary",
                       "group flex gap-x-2 rounded-lg p-3 px-4 text-base leading-6 font-medium"
                     )}
                   >
                     {React.cloneElement(item.icon, {
                       className: classNames(
-                          item.current ? "current_active" : "text-gray-500",
-                          "h-6 w-6 shrink-0"
+                        item.current ? "current_active" : "text-gray-500",
+                        "h-6 w-6 shrink-0"
                       ),
                     })}
                     {item.name}
@@ -76,33 +128,47 @@ const MainMenu: React.FC = () => {
                     {({ open }) => (
                       <>
                         <DisclosureButton
-                            className={classNames(
-                                item.current
-                                    ? "bg-primary text-white font-bold current_button"
-                                    : "text-primary hover:text-white hover:bg-primary",
-                                  open ? "bg-primary text-white font-bold button_open" : "",
-                                "flex items-center w-full text-left rounded-lg gap-x-2 p-3 px-4 text-base leading-6 font-medium text-primary"
-                            )}
+                          className={classNames(
+                            item.current
+                              ? "bg-primary text-white font-bold current_button"
+                              : "text-primary hover:text-white hover:bg-pinkPrimary",
+                            open
+                              ? "bg-pink-600 text-white font-bold button_open"
+                              : "",
+                            "flex items-center w-full text-left rounded-lg gap-x-2 p-3 px-4 text-base leading-6 font-medium text-primary"
+                          )}
                         >
                           {React.cloneElement(item.icon, {
                             className: classNames(
-                                item.current ? "text-white" : "text-gray-500", open ? "op" : "",
-                                "h-6 w-6 shrink-0"
+                              item.current ? "text-white" : "text-gray-500",
+                              open ? "op" : "",
+                              "h-6 w-6 shrink-0"
                             ),
                           })}
                           {item.name}
                           <ChevronDownIcon
-                              className={classNames(
-                                  item.current ? "text-white" : "text-indigo-200",
-                                  open ? "rotate-180 text-white" : "text-indigo-200",
-                                  "ml-auto h-6 w-6 shrink-0"
-                              )}
-                              aria-hidden="true"
+                            className={classNames(
+                              item.current ? "text-white" : "text-indigo-200",
+                              open
+                                ? "rotate-180 text-white"
+                                : "text-indigo-200",
+                              "ml-auto h-6 w-6 shrink-0"
+                            )}
+                            aria-hidden="true"
                           />
                         </DisclosureButton>
-                        <DisclosurePanel as="ul" className="sub_items pl-5 pb-2 flex flex-col">
+                        <DisclosurePanel
+                          as="ul"
+                          className="sub_items pl-5 pb-2 flex flex-col"
+                        >
                           {item.children.map((subItem) => (
-                            <li key={subItem.name} className={classNames(subItem.current ? "sub_items_item_active" : "", "sub_items_item")}>
+                            <li
+                              key={subItem.name}
+                              className={classNames(
+                                subItem.current ? "sub_items_item_active" : "",
+                                "sub_items_item"
+                              )}
+                            >
                               <Link
                                 to={subItem.href}
                                 className={classNames(

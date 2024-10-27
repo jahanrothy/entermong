@@ -45,10 +45,10 @@ const ForgotPassword: React.FC = () => {
         <div className="absolute flex items-center justify-center h-full left-[12%]">
           <div className="w-full max-w-sm lg:w-96  p-7 rounded-xl">
             <div className="text-center relative">
-              <h1 className=" pb-3 text-2xl font-bold leading-7 tracking-tight text-[#FF6183]  ">
+              <h1 className=" pb-3 text-2xl font-bold leading-7 tracking-tight text-pinkPrimary  ">
                 Forgot Your Password?
               </h1>
-              <h2 className=" pb-4 text-md font-medium leading-7 tracking-tight text-[#FF6183]  border-b border-pink-200">
+              <h2 className=" pb-4 text-sm font-medium leading-5 tracking-tight text-pinkPrimary border-b border-pink-200">
                 Enter your email address and we will send you a link to rest
                 your password
               </h2>

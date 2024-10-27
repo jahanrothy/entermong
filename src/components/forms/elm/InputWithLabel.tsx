@@ -16,7 +16,7 @@ const InputWithLabel = forwardRef<HTMLInputElement, InputProps>(
       <div className="relative">
         <Label htmlFor={id}>
           {label}
-          {required && <span className="text-[#FF6183] "> *</span>}
+          {required && <span className="text-pinkPrimary"> *</span>}
         </Label>
         <div className="mt-1.5">
           <Input

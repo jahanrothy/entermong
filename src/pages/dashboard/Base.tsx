@@ -5,18 +5,18 @@ import {
   TransitionChild,
 } from "@headlessui/react";
 
-import { useState } from "react";
-import { Outlet,} from "react-router-dom";
-import Sidebar from "../../components/sidebar/Sidebar.tsx";
-import {XMarkIcon} from "@heroicons/react/24/outline";
 import HeaderPanel from "@/components/section/Header.tsx";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import Sidebar from "../../components/sidebar/Sidebar.tsx";
 
 const DashboardBase: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const MobileMenuHandler = () => {
-    setSidebarOpen(true)
-  }
+    setSidebarOpen(true);
+  };
   return (
     <main className="relative" role="main">
       <Transition show={sidebarOpen}>

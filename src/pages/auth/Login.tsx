@@ -51,7 +51,7 @@ const Login: React.FC = () => {
                 alt="Potential Logo"
                 className="max-w-[100px] inline-block"
               />
-              <h2 className="mb-4 pb-5 text-xl font-medium leading-7 tracking-tight text-[#FF6183]  border-b border-pink-200">
+              <h2 className="mb-4 pb-5 text-xl font-medium leading-7 tracking-tight text-pinkPrimary  border-b border-pink-200">
                 EnterMong
               </h2>
             </div>

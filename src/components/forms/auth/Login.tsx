@@ -15,7 +15,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ submitForm }) => {
 
   return (
     <form
-      className="space-y-4 text-[#FF6183]"
+      className="space-y-4 text-pinkPrimary"
       onSubmit={handleSubmit(handleFormSubmit)}
     >
       <InputWithLabel
@@ -40,7 +40,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ submitForm }) => {
         <div className="text-sm leading-6">
           <Link
             to="/forgot"
-            className="font-normal text-sm text-[#FF6183] hover:text-pink-600"
+            className="font-normal text-sm text-pinkPrimary hover:text-pink-600"
           >
             Forgot password?
           </Link>
@@ -50,7 +50,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ submitForm }) => {
       <div>
         <button
           type="submit"
-          className="flex w-full justify-center rounded-3xl bg-[#FF6183] px-3 py-2 text-md font-semibold leading-6 text-white shadow-sm hover:bg-pink-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-base"
+          className="flex w-full justify-center rounded-3xl bg-pinkPrimary px-3 py-2 text-md font-semibold leading-6 text-white shadow-sm hover:bg-pink-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-base"
         >
           Sign in
         </button>

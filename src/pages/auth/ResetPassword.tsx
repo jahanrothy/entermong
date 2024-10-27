@@ -44,7 +44,7 @@ const ResetPassword: React.FC = () => {
         <div className="absolute flex items-center justify-center h-full left-[12%]">
           <div className="w-full max-w-sm lg:w-96  p-7 rounded-xl">
             <div className="text-center relative">
-              <h2 className="mb-4 pb-5 text-xl font-medium leading-7 tracking-tight text-[#FF6183]  border-b border-pink-200">
+              <h2 className="mb-4 pb-5 text-xl font-medium leading-7 tracking-tight text-pinkPrimary  border-b border-pink-200">
                 Reset Your Password
               </h2>
             </div>

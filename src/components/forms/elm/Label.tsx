@@ -14,7 +14,7 @@ const Label: React.FC<LabelProps> = ({
     <label
       {...props}
       className={classNames(
-        "block text-sm font-medium leading-5 text-[#FF6183] ",
+        "block text-sm font-medium leading-5 text-pinkPrimary",
         className
       )}
     >
