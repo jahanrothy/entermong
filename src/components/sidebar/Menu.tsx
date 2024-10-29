@@ -8,8 +8,16 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 // icons
-import DashboardIcon from "@/assets/icons/dashboard.svg";
-import ProductManagment from "@/assets/icons/product_managment.svg";
+import {
+  default as DashboardIcon,
+  default as ProductManagment,
+} from "@/assets/icons/dashboard.svg";
+
+import PaymentManagment from "@/assets/icons/credit-card-pos.svg";
+import ParentManagment from "@/assets/icons/parent.svg";
+import OthersManagment from "@/assets/icons/settings.svg";
+import TeacherManagment from "@/assets/icons/teacher.svg";
+import ServiceManagment from "@/assets/icons/Vector.svg";
 
 const MainMenu: React.FC = () => {
   // const { data, success } = useSelector<RootState, UserState>((state) => state.profile);
@@ -26,47 +34,45 @@ const MainMenu: React.FC = () => {
     },
     {
       name: "Parent User Management",
-      icon: <ProductManagment />,
+      icon: <ParentManagment />,
       href: "/admin/parent-user-management",
       current: currentPath === "/admin/parent-user-management",
     },
 
     {
       name: "Teacher User Management",
-      icon: <ProductManagment />,
+      icon: <TeacherManagment />,
       href: "/admin/teacher-user-management",
       current: currentPath === "/admin/teacher-user-management",
-    
     },
 
     {
       name: "Service Management",
-      icon: <ProductManagment />,
+      icon: <ServiceManagment />,
       href: "/admin/service-management",
       current: currentPath === "/admin/service-management",
-     
     },
 
     {
       name: "Withdrawl Management",
-      icon: <ProductManagment />,
+      icon: <PaymentManagment />,
       href: "/admin/withdrawl-management",
       current: currentPath === "/admin/withdrawl-management",
-      // children: [
-      //   {
-      //     name: "Category list",
-      //     href: "/admin/products/category",
-      //     current:
-      //       currentPath === "/admin/products/category" ||
-      //       currentPath === "/admin/products/category/create" ||
-      //       currentPath.match(
-      //         /\/admin\/products\/category\/[a-zA-Z0-9_-]+\/details/
-      //       ) ||
-      //       currentPath.match(
-      //         /\/admin\/products\/category\/[a-zA-Z0-9_-]+\/edit/
-      //       ),
-      //   },
-      // ],
+      children: [
+        {
+          name: "Category list",
+          href: "/admin/products/category",
+          current:
+            currentPath === "/admin/products/category" ||
+            currentPath === "/admin/products/category/create" ||
+            currentPath.match(
+              /\/admin\/products\/category\/[a-zA-Z0-9_-]+\/details/
+            ) ||
+            currentPath.match(
+              /\/admin\/products\/category\/[a-zA-Z0-9_-]+\/edit/
+            ),
+        },
+      ],
     },
 
     {
@@ -74,7 +80,6 @@ const MainMenu: React.FC = () => {
       icon: <ProductManagment />,
       href: "/admin/notice-management",
       current: currentPath === "/admin/notice-management",
-   
     },
 
     {
@@ -82,15 +87,13 @@ const MainMenu: React.FC = () => {
       icon: <ProductManagment />,
       href: "/admin/inquiry-management",
       current: currentPath === "/admin/inquiry-management",
-    
     },
 
     {
       name: "Others Management",
-      icon: <ProductManagment />,
+      icon: <OthersManagment />,
       href: "/admin/others-management",
       current: currentPath === "/admin/others-management",
-      
     },
   ];
 
