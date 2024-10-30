@@ -10,13 +10,13 @@ const TeacherTable: React.FC = () => {
           <th className="px-5 py-3   text-left text-base font-medium text-[#727272] capitalize">
             Nanny Name
           </th>
-          <th className="px-5 py-3   text-left text-base font-medium text-[#727272] capitalize">
+          <th className="px-5 py-3 pl-0  text-left text-base font-medium text-[#727272] capitalize">
             Email
           </th>
-          <th className="px-5 py-3 text-left   text-base font-medium text-[#727272] capitalize">
+          <th className="px-5 py-3 text-left pl-0  text-base font-medium text-[#727272] capitalize">
             Adress
           </th>
-          <th className="px-5 py-3 text-left text-base font-medium text-[#727272] capitalize">
+          <th className="px-5 py-3 pl-0 text-left text-base font-medium text-[#727272] capitalize">
             Contact
           </th>
           <th className="px-5 py-3 pl-24 text-left text-base font-medium text-[#727272] capitalize">

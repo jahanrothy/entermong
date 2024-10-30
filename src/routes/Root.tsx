@@ -12,6 +12,7 @@ import OthersManagemetBase from "@/pages/dashboard/others-management/Base";
 import { OthersManagementList } from "@/pages/dashboard/others-management/OthersList";
 import ParentUserManagemetBase from "@/pages/dashboard/parent-user-management/Base";
 import { ParentUserManagementList } from "@/pages/dashboard/parent-user-management/ParentList";
+import ParentTable from "@/pages/dashboard/parent-user-management/ParentTable";
 import ServiceManagemetBase from "@/pages/dashboard/service-management/Base";
 import { ServiceManagementList } from "@/pages/dashboard/service-management/ServiceList";
 import TeacherUserManagemetBase from "@/pages/dashboard/teacher-user-mahagement/Base";
@@ -31,57 +32,47 @@ const Root: React.FC = () => {
           <Route path="/reset" element={<ResetPassword />} />
           <Route path="/forgot" element={<ForgotPassword />} />
         </Route>
+
         <Route path="/admin" element={<DashboardBase />}>
           <Route index element={<Dashboard />} />
-            <Route
-                path="parent-user-management"
-                element={<ParentUserManagemetBase />}
-              >
-                <Route index element={<ParentUserManagementList />} />
-            </Route>
+          <Route
+            path="parent-user-management"
+            element={<ParentUserManagemetBase />}
+          >
+            <Route index element={<ParentUserManagementList />} />
+          </Route>
 
-            <Route
-                path="teacher-user-management"
-                element={<TeacherUserManagemetBase />}
-              >
-                <Route index element={<TeacherUserManagementList />} />
-            </Route>
+          <Route path="/admin" element={<ParentTable />} />
 
-            <Route
-                path="service-management"
-                element={<ServiceManagemetBase />}
-              >
-                <Route index element={<ServiceManagementList/>} />
-            </Route>
+          <Route
+            path="teacher-user-management"
+            element={<TeacherUserManagemetBase />}
+          >
+            <Route index element={<TeacherUserManagementList />} />
+          </Route>
 
-            <Route
-                path="withdrawl-management"
-                element={<WithdrawlManagemetBase />}
-              >
-                <Route index element={<WithdrawlManagementList/>} />
-            </Route>
+          <Route path="service-management" element={<ServiceManagemetBase />}>
+            <Route index element={<ServiceManagementList />} />
+          </Route>
 
-            <Route
-                path="notice-management"
-                element={<NoticeManagemetBase />}
-              >
-                <Route index element={<NoticeManagementList/>} />
-            </Route>
+          <Route
+            path="withdrawl-management"
+            element={<WithdrawlManagemetBase />}
+          >
+            <Route index element={<WithdrawlManagementList />} />
+          </Route>
 
-            <Route
-                path="inquiry-management"
-                element={<InquiryManagemetBase />}
-              >
-                <Route index element={<InquiryManagementList/>} />
-            </Route>
+          <Route path="notice-management" element={<NoticeManagemetBase />}>
+            <Route index element={<NoticeManagementList />} />
+          </Route>
 
-            <Route
-                path="others-management"
-                element={<OthersManagemetBase />}
-              >
-                <Route index element={<OthersManagementList/>} />
-            </Route>
-            
+          <Route path="inquiry-management" element={<InquiryManagemetBase />}>
+            <Route index element={<InquiryManagementList />} />
+          </Route>
+
+          <Route path="others-management" element={<OthersManagemetBase />}>
+            <Route index element={<OthersManagementList />} />
+          </Route>
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

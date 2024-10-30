@@ -13,7 +13,8 @@ import {
   default as ProductManagment,
 } from "@/assets/icons/dashboard.svg";
 
-import PaymentManagment from "@/assets/icons/credit-card-pos.svg";
+import PaymentManagment from "@/assets/icons/Group 1261153548.svg";
+import NoticeManagment from "@/assets/icons/help-circle.svg";
 import ParentManagment from "@/assets/icons/parent.svg";
 import OthersManagment from "@/assets/icons/settings.svg";
 import TeacherManagment from "@/assets/icons/teacher.svg";
@@ -58,26 +59,11 @@ const MainMenu: React.FC = () => {
       icon: <PaymentManagment />,
       href: "/admin/withdrawl-management",
       current: currentPath === "/admin/withdrawl-management",
-      children: [
-        {
-          name: "Category list",
-          href: "/admin/products/category",
-          current:
-            currentPath === "/admin/products/category" ||
-            currentPath === "/admin/products/category/create" ||
-            currentPath.match(
-              /\/admin\/products\/category\/[a-zA-Z0-9_-]+\/details/
-            ) ||
-            currentPath.match(
-              /\/admin\/products\/category\/[a-zA-Z0-9_-]+\/edit/
-            ),
-        },
-      ],
     },
 
     {
       name: "Notice Management",
-      icon: <ProductManagment />,
+      icon: <NoticeManagment />,
       href: "/admin/notice-management",
       current: currentPath === "/admin/notice-management",
     },
@@ -94,6 +80,21 @@ const MainMenu: React.FC = () => {
       icon: <OthersManagment />,
       href: "/admin/others-management",
       current: currentPath === "/admin/others-management",
+      children: [
+        {
+          name: "Category list",
+          href: "/admin/products/category",
+          current:
+            currentPath === "/admin/products/category" ||
+            currentPath === "/admin/products/category/create" ||
+            currentPath.match(
+              /\/admin\/products\/category\/[a-zA-Z0-9_-]+\/details/
+            ) ||
+            currentPath.match(
+              /\/admin\/products\/category\/[a-zA-Z0-9_-]+\/edit/
+            ),
+        },
+      ],
     },
   ];
 
@@ -113,8 +114,8 @@ const MainMenu: React.FC = () => {
                     to={item.href}
                     className={classNames(
                       item.current
-                        ? "bg-pinkPrimary text-white font-bold current"
-                        : "text-primary hover:text-white hover:bg-pinkPrimary",
+                        ? "bg-[#F7E342] text-black font-bold current"
+                        : "text-white hover:text-black hover:bg-[#F7E342]",
                       "group flex gap-x-2 rounded-lg p-3 px-4 text-base leading-6 font-medium"
                     )}
                   >
@@ -134,11 +135,11 @@ const MainMenu: React.FC = () => {
                           className={classNames(
                             item.current
                               ? "bg-primary text-white font-bold current_button"
-                              : "text-primary hover:text-white hover:bg-pinkPrimary",
+                              : "text-primary hover:text-white hover:bg-[#F7E342]",
                             open
-                              ? "bg-pink-600 text-white font-bold button_open"
+                              ? "bg-[#F7E342] text-black font-bold button_open"
                               : "",
-                            "flex items-center w-full text-left rounded-lg gap-x-2 p-3 px-4 text-base leading-6 font-medium text-primary"
+                            "flex items-center w-full text-left rounded-lg gap-x-2 p-3 px-4 text-base leading-6 font-medium text-white"
                           )}
                         >
                           {React.cloneElement(item.icon, {
@@ -168,7 +169,9 @@ const MainMenu: React.FC = () => {
                             <li
                               key={subItem.name}
                               className={classNames(
-                                subItem.current ? "sub_items_item_active" : "",
+                                subItem.current
+                                  ? "sub_items_item_active"
+                                  : "text-black",
                                 "sub_items_item"
                               )}
                             >

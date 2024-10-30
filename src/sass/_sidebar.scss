@@ -1,54 +1,51 @@
-
-
-.sidebar_menu{
-  ul{
-    li{
+.sidebar_menu {
+  ul {
+    li {
       a,
-      button{
+      button {
         &.current_button,
-        &.button_open{
-          svg{
-            @apply fill-white;
-            path{
-              @apply fill-white stroke-white;
+        &.button_open {
+          svg {
+            @apply fill-black;
+            path {
+              @apply fill-black stroke-black;
               &.fill-none-hover,
-              &.fill_none{
+              &.fill_none {
                 @apply fill-none;
               }
             }
           }
         }
-        svg{
-          @apply fill-neutral-500;
-          path{
-            @apply fill-neutral-500 ;
-            &.fill_none{
+        svg {
+          @apply fill-white;
+          path {
+            @apply fill-white;
+            &.fill_none {
               @apply fill-none;
             }
           }
-          &.promotion_icon{
-
+          &.promotion_icon {
           }
-          &.current{
-            &_active{
-              @apply fill-white;
-              path{
-                @apply fill-white stroke-white;
+          &.current {
+            &_active {
+              @apply fill-black;
+              path {
+                @apply fill-black stroke-black;
                 &.fill-none-hover,
-                &.fill_none{
+                &.fill_none {
                   @apply fill-none;
                 }
               }
             }
           }
         }
-        &:hover{
-          svg{
-            @apply fill-white stroke-white;
-            path{
-              @apply fill-white stroke-white;
+        &:hover {
+          svg {
+            @apply fill-black stroke-black;
+            path {
+              @apply fill-black stroke-black;
               &.fill-none-hover,
-              &.fill_none{
+              &.fill_none {
                 @apply fill-none;
               }
             }
@@ -56,21 +53,20 @@
         }
       }
 
-      .sub{
-        &_items{
+      .sub {
+        &_items {
           @apply pt-2;
-          &_item{
+          &_item {
             @apply relative pl-6 inline-block;
-            a{
+            a {
               @apply w-10/12 mb-2;
             }
-            &:before{
-              content: '';
+            &:before {
+              content: "";
               @apply absolute bottom-0 left-0 h-full w-[1px] bg-gray-400;
             }
 
-
-            &:after{
+            &:after {
               content: "•";
               @apply absolute text-gray-400;
               top: 28%;
@@ -79,20 +75,20 @@
             }
 
             &:hover,
-            &_active{
-              &:after{
+            &_active {
+              &:after {
                 @apply text-primary;
               }
             }
 
-            &:first-child{
-              &:before{
+            &:first-child {
+              &:before {
                 @apply h-1/2;
               }
             }
 
-            &:last-child{
-              &:before{
+            &:last-child {
+              &:before {
                 @apply h-1/2 top-0 bottom-auto;
               }
             }

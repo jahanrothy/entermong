@@ -1,4 +1,4 @@
-import FilterIcon from "@/assets/icons/filter.svg";
+import FilterIcon from "@/assets/icons/filter-horizontal.svg";
 import PageTitle from "@/components/common/PageTitle.tsx";
 import Pagination from "../../../components/table/Pagination.tsx";
 import ParentTable from "./ParentTable.tsx";
@@ -43,7 +43,7 @@ export const ParentUserManagementList: React.FC = () => {
 
             <button
               type="button"
-              className=" absolute flex items-center justify-center  right-0 top-[4.5px] w-14 h-8 mr-3 bg-[#E5EAE7] text-[#8B8D8C] rounded-3xl"
+              className=" absolute flex items-center justify-center  right-0 top-[6px] w-12 h-7 mr-3 bg-[#1AB653] text-[#8B8D8C] rounded-3xl"
             >
               <FilterIcon />
             </button>
@@ -52,7 +52,9 @@ export const ParentUserManagementList: React.FC = () => {
 
         {/* <SearchBar classNameNameName={""} placeholder={placeholder} /> */}
       </div>
-      <ParentTable />
+      <div className="px-5">
+        <ParentTable />
+      </div>
 
       <Pagination
         totalItems={totalItems}
