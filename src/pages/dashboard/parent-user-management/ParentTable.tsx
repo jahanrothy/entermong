@@ -1,4 +1,5 @@
 import ViewDetails from "@/assets/icons/view.svg";
+import { Link } from "react-router-dom";
 
 const ParentTable: React.FC = () => {
   return (
@@ -58,51 +59,7 @@ const ParentTable: React.FC = () => {
           </td>
 
           <td className="px-5 text-sm text-[#6BA475] ">
-            <button
-              type="button"
-              className="flex items-center justify-center  w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
-            >
-              <ViewDetails />
-            </button>
-          </td>
-        </tr>
-
-        <tr className="px-5 py-4 border-b border-gray-200 bg-white text-sm">
-          <td className="px-5 py-3 text-sm">
-            <div className="flex items-center gap-3">
-              <div className="flex-shrink-0 w-12 h-12">
-                <img
-                  className="w-full h-full rounded-full"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
-                  alt=""
-                />
-              </div>
-              <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
-                Lee-Ji-Won
-              </p>
-              <div className="ml-3"></div>
-            </div>
-          </td>
-
-          <td>
-            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
-              demoleejiwon@gmail.com
-            </p>
-          </td>
-          <td>
-            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
-              demoleejiwon
-            </p>
-          </td>
-
-          <td>
-            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
-              12345567889
-            </p>
-          </td>
-
-          {/* <td className="px-5 text-sm text-[#6BA475] ">
-            <Link to="/parent-view">
+            <Link to="/admin/parent-user-management/${id}/details">
               <button
                 type="button"
                 className="flex items-center justify-center w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
@@ -110,15 +67,107 @@ const ParentTable: React.FC = () => {
                 <ViewDetails />
               </button>
             </Link>
+          </td>
+        </tr>
+
+        <tr className="px-5 py-4 border-b border-gray-200 bg-white text-sm">
+          <td className="px-5 py-3 text-sm">
+            <div className="flex items-center gap-3">
+              <div className="flex-shrink-0 w-12 h-12">
+                <img
+                  className="w-full h-full rounded-full"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                  alt=""
+                />
+              </div>
+              <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
+                Lee-Ji-Won
+              </p>
+              <div className="ml-3"></div>
+            </div>
+          </td>
+
+          <td>
+            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
+              demoleejiwon@gmail.com
+            </p>
+          </td>
+          <td>
+            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
+              demoleejiwon
+            </p>
+          </td>
+
+          <td>
+            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
+              12345567889
+            </p>
+          </td>
+
+          <td className="px-5 text-sm text-[#6BA475] ">
+            <Link to="/admin/parent-user-management/${id}/details">
+              <button
+                type="button"
+                className="flex items-center justify-center w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
+              >
+                <ViewDetails />
+              </button>
+            </Link>
+          </td>
+
+          {/* <td className="px-5 text-sm text-[#6BA475] ">
+            <button
+              type="button"
+              className="flex items-center justify-center  w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
+            >
+              <ViewDetails />
+            </button>
           </td> */}
+        </tr>
+
+        <tr className="px-5 py-4 border-b border-gray-200 bg-white text-sm">
+          <td className="px-5 py-3 text-sm">
+            <div className="flex items-center gap-3">
+              <div className="flex-shrink-0 w-12 h-12">
+                <img
+                  className="w-full h-full rounded-full"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                  alt=""
+                />
+              </div>
+              <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
+                Lee-Ji-Won
+              </p>
+              <div className="ml-3"></div>
+            </div>
+          </td>
+
+          <td>
+            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
+              demoleejiwon@gmail.com
+            </p>
+          </td>
+          <td>
+            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
+              demoleejiwon
+            </p>
+          </td>
+
+          <td>
+            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
+              12345567889
+            </p>
+          </td>
 
           <td className="px-5 text-sm text-[#6BA475] ">
-            <button
-              type="button"
-              className="flex items-center justify-center  w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
-            >
-              <ViewDetails />
-            </button>
+            <Link to="/admin/parent-user-management/${id}/details">
+              <button
+                type="button"
+                className="flex items-center justify-center w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
+              >
+                <ViewDetails />
+              </button>
+            </Link>
           </td>
         </tr>
 
@@ -157,56 +206,14 @@ const ParentTable: React.FC = () => {
           </td>
 
           <td className="px-5 text-sm text-[#6BA475] ">
-            <button
-              type="button"
-              className="flex items-center justify-center  w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
-            >
-              <ViewDetails />
-            </button>
-          </td>
-        </tr>
-
-        <tr className="px-5 py-4 border-b border-gray-200 bg-white text-sm">
-          <td className="px-5 py-3 text-sm">
-            <div className="flex items-center gap-3">
-              <div className="flex-shrink-0 w-12 h-12">
-                <img
-                  className="w-full h-full rounded-full"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
-                  alt=""
-                />
-              </div>
-              <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
-                Lee-Ji-Won
-              </p>
-              <div className="ml-3"></div>
-            </div>
-          </td>
-
-          <td>
-            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
-              demoleejiwon@gmail.com
-            </p>
-          </td>
-          <td>
-            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
-              demoleejiwon
-            </p>
-          </td>
-
-          <td>
-            <p className="text-[#242424] font-medium text-base leading-5 whitespace-no-wrap">
-              12345567889
-            </p>
-          </td>
-
-          <td className="px-5 text-sm text-[#6BA475] ">
-            <button
-              type="button"
-              className="flex items-center justify-center  w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
-            >
-              <ViewDetails />
-            </button>
+            <Link to="/admin/parent-user-management/${id}/details">
+              <button
+                type="button"
+                className="flex items-center justify-center w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
+              >
+                <ViewDetails />
+              </button>
+            </Link>
           </td>
         </tr>
 
@@ -245,12 +252,14 @@ const ParentTable: React.FC = () => {
           </td>
 
           <td className="px-5 text-sm text-[#6BA475] ">
-            <button
-              type="button"
-              className="flex items-center justify-center  w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
-            >
-              <ViewDetails />
-            </button>
+            <Link to="/admin/parent-user-management/${id}/details">
+              <button
+                type="button"
+                className="flex items-center justify-center w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
+              >
+                <ViewDetails />
+              </button>
+            </Link>
           </td>
         </tr>
 
@@ -289,12 +298,14 @@ const ParentTable: React.FC = () => {
           </td>
 
           <td className="px-5 text-sm text-[#6BA475] ">
-            <button
-              type="button"
-              className="flex items-center justify-center  w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
-            >
-              <ViewDetails />
-            </button>
+            <Link to="/admin/parent-user-management/${id}/details">
+              <button
+                type="button"
+                className="flex items-center justify-center w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
+              >
+                <ViewDetails />
+              </button>
+            </Link>
           </td>
         </tr>
 
@@ -333,12 +344,14 @@ const ParentTable: React.FC = () => {
           </td>
 
           <td className="px-5 text-sm text-[#6BA475] ">
-            <button
-              type="button"
-              className="flex items-center justify-center  w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
-            >
-              <ViewDetails />
-            </button>
+            <Link to="/admin/parent-user-management/${id}/details">
+              <button
+                type="button"
+                className="flex items-center justify-center w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
+              >
+                <ViewDetails />
+              </button>
+            </Link>
           </td>
         </tr>
 
@@ -377,12 +390,14 @@ const ParentTable: React.FC = () => {
           </td>
 
           <td className="px-5 text-sm text-[#6BA475] ">
-            <button
-              type="button"
-              className="flex items-center justify-center  w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
-            >
-              <ViewDetails />
-            </button>
+            <Link to="/admin/parent-user-management/${id}/details">
+              <button
+                type="button"
+                className="flex items-center justify-center w-11 h-11 bg-[#EDEFEE] text-[#6BA475] rounded-lg"
+              >
+                <ViewDetails />
+              </button>
+            </Link>
           </td>
         </tr>
       </tbody>

@@ -8,17 +8,15 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 // icons
-import {
-  default as DashboardIcon,
-  default as ProductManagment,
-} from "@/assets/icons/dashboard.svg";
+import { default as DashboardIcon } from "@/assets/icons/dashboard.svg";
 
-import PaymentManagment from "@/assets/icons/Group 1261153548.svg";
-import NoticeManagment from "@/assets/icons/help-circle.svg";
+import InquiryManagment from "@/assets/icons/inpuiry.svg";
+import NoticeManagment from "@/assets/icons/notice.svg";
 import ParentManagment from "@/assets/icons/parent.svg";
+import PaymentManagment from "@/assets/icons/payment.svg";
+import ServiceManagment from "@/assets/icons/service.svg";
 import OthersManagment from "@/assets/icons/settings.svg";
 import TeacherManagment from "@/assets/icons/teacher.svg";
-import ServiceManagment from "@/assets/icons/Vector.svg";
 
 const MainMenu: React.FC = () => {
   // const { data, success } = useSelector<RootState, UserState>((state) => state.profile);
@@ -70,7 +68,7 @@ const MainMenu: React.FC = () => {
 
     {
       name: "1:1 Inquiry Management",
-      icon: <ProductManagment />,
+      icon: <InquiryManagment />,
       href: "/admin/inquiry-management",
       current: currentPath === "/admin/inquiry-management",
     },

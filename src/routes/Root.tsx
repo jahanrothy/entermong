@@ -12,7 +12,7 @@ import OthersManagemetBase from "@/pages/dashboard/others-management/Base";
 import { OthersManagementList } from "@/pages/dashboard/others-management/OthersList";
 import ParentUserManagemetBase from "@/pages/dashboard/parent-user-management/Base";
 import { ParentUserManagementList } from "@/pages/dashboard/parent-user-management/ParentList";
-import ParentTable from "@/pages/dashboard/parent-user-management/ParentTable";
+import { ParentView } from "@/pages/dashboard/parent-user-management/ParentView";
 import ServiceManagemetBase from "@/pages/dashboard/service-management/Base";
 import { ServiceManagementList } from "@/pages/dashboard/service-management/ServiceList";
 import TeacherUserManagemetBase from "@/pages/dashboard/teacher-user-mahagement/Base";
@@ -35,14 +35,14 @@ const Root: React.FC = () => {
 
         <Route path="/admin" element={<DashboardBase />}>
           <Route index element={<Dashboard />} />
+
           <Route
             path="parent-user-management"
             element={<ParentUserManagemetBase />}
           >
             <Route index element={<ParentUserManagementList />} />
+            <Route path=":id/details" element={<ParentView />} />
           </Route>
-
-          <Route path="/admin" element={<ParentTable />} />
 
           <Route
             path="teacher-user-management"
